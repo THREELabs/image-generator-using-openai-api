@@ -50,7 +50,7 @@
   </div>
   <footer class="text-center mt-10 border-t-2 border-gray-200 py-4" id="checkAuthor">
     <p class="text-sm">
---
+      ---
     </p>
   </footer>
 </body>
@@ -87,10 +87,11 @@
 
   let imageSizes = sizeSelect.value;
   let numImages = parseInt(numImagesSelect.value);
-  let apiKey = "api_Key";
+  let apiKey = "";
+  let openAI = "api_Key";
 
   function generateImage() {
-    if (apiKey === "api_Key") {
+    if (apiKey === "") {
       apiKey = apiInput.value.trim() || api;
       if (apiKey === "") {
         alert("Please enter your OpenAI API key");
@@ -117,7 +118,7 @@
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: "Bearer " + apiKey,
+        Authorization: "Bearer " + openAI,
       },
       body: JSON.stringify(data),
     })
