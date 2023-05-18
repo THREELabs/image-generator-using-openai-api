@@ -87,10 +87,10 @@
 
   let imageSizes = sizeSelect.value;
   let numImages = parseInt(numImagesSelect.value);
-  let apiKey = "";
+  let apiKey = "api_Key";
 
   function generateImage() {
-    if (apiKey === "") {
+    if (apiKey === "api_Key") {
       apiKey = apiInput.value.trim() || api;
       if (apiKey === "") {
         alert("Please enter your OpenAI API key");
