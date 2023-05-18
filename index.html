@@ -50,7 +50,8 @@
   </div>
   <footer class="text-center mt-10 border-t-2 border-gray-200 py-4" id="checkAuthor">
     <p class="text-sm">
-      ---
+      Made with ❤️ by
+      <a href="https://github.com/sauravhathi" class="font-semibold">@sauravhathi</a>
     </p>
   </footer>
 </body>
@@ -88,7 +89,6 @@
   let imageSizes = sizeSelect.value;
   let numImages = parseInt(numImagesSelect.value);
   let apiKey = "";
-  let openAI = "api_Key";
 
   function generateImage() {
     if (apiKey === "") {
@@ -118,7 +118,7 @@
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: "Bearer " + openAI,
+        Authorization: "Bearer " + apiKey,
       },
       body: JSON.stringify(data),
     })
